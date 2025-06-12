@@ -20,11 +20,56 @@
             padding: 0;
             margin: 0;
         }
-        </style>
-        <title></title>
-    </head>
-    <body>
-        <div id="map">
+        #custom-logo {
+    position: absolute;
+    bottom: 20px;   /* pojok bawah */
+    left: 20px;     /* pojok kiri */
+    width: 200px;
+    z-index: 9998;
+    opacity: 0.9;
+    background: white;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+
+    </style>
+    <title>Kemiringan Lereng</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+<nav style="
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+height: 60px;
+background-color: white;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 40px;
+font-family: 'Segoe UI', sans-serif;
+z-index: 9999;
+box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+">
+<!-- Logo dan Judul -->
+<div style="display: flex; align-items: center;">
+    <img src="../../assets/img/LogoGZ.png" alt="Logo" style="height: 30px; margin-right: 10px;">
+    <span style="font-size: 22px; font-weight: bold; color: #002b5c;">GZone</span>
+</div>
+
+<!-- Menu Navigasi -->
+<div style="display: flex; gap: 20px;">
+    <a href="../../index.html" style="color: #002b5c; text-decoration: none; font-weight: 500;">Home</a>
+    <a href="#" onclick="openModal()" style="color: #002b5c; text-decoration: none; font-weight: 500;">Info</a>
+
+</div>
+</nav>
+        <div id="map"></div>
+<img id="custom-logo" src="../../assets/img/Peta/legenda_f0.jpg" alt="Logo BMKG">
         </div>
         <script src="js/qgis2web_expressions.js"></script>
         <script src="js/leaflet.js"></script>
